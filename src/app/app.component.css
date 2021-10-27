@@ -1,0 +1,116 @@
+/*toolbar design*/
+.navbar{
+    justify-content: space-between;
+}
+
+span{
+    padding-right: 1rem;
+}
+
+/*sidenav design*/
+mat-sidenav-container{
+    height: 100%;
+}
+
+mat-sidenav, mat-sidenav-content{
+    padding:16px;
+}
+
+mat-sidenav{
+    background-color: lightcoral;
+    width: 200px;
+}
+
+/*menu*/
+.center{
+    margin:10rem;
+}
+
+/*grid*/
+mat-grid-tile{
+    background-color: lightblue;
+}
+
+/*accordian*/
+mat-accordion{
+    display: grid;
+    margin: auto;
+    width: 80%;
+    margin-top: 3rem;
+    
+}
+
+.mat-expansion-panel {
+    background-color: rgb(243, 242, 242);  
+    border: 2px solid #bccee2;
+  
+}
+/* odd even child design
+li:nth-child(1n) { color:green; }
+li:nth-child(2n) { color:red; } */
+
+
+ /*nth child design applied the the body and color applied when hover over a header and 
+ this is because of angular Material does also add background: inherit on the hover state.*/
+
+/* mat-accordion.design mat-expansion-panel:nth-child(odd){
+    background-color: crimson;
+} */
+
+/*Expansion Panel Header Design*/
+/* .mat-expansion-panel-header{
+    background-color: #dbdcdd;
+} */
+
+.mat-expansion-panel.mat-expanded .mat-expansion-panel-header {
+    background-color: #b1c5e6;
+}
+
+/* .mat-expansion-panel.mat-expanded .mat-expansion-panel-header{
+    background-color: #545e71;
+}
+.mat-expansion-panel.mat-expanded .mat-expansion-panel-header{
+    background-color: #50ce56;
+} */
+
+/* 
+mat-expansion-panel.bg mat-expansion-panel-header:nth-child(odd){
+    background: #dbdcdd;
+} */
+
+divv > :nth-child(2)  { /*change divv to mat-accordion to see the output*/
+    color: crimson; /*font color of the body content*/
+    background-color: crimson; /*color changed when hover*/
+}
+
+.box:focus-within {
+    border: 2px solid #21a8e1;
+    
+}
+
+.box1:focus-within {
+    border: 2px solid #545e71;
+    
+}
+
+.box2:focus-within {
+    border: 2px solid  rgb(115, 114, 172);
+    
+}
+
+.mat-expansion-panel-header-title{
+    color: rgb(12, 11, 11);
+}
+
+.mat-expansion-panel-header-description{
+    color: rgb(59, 58, 58);
+}
+
+/*Radio Button Design*/
+.radioBtn{
+    margin-left: -80px;
+    margin-top: 3px;
+
+    color: rgb(155, 153, 153);
+}
+
