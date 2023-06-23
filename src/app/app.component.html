@@ -1,29 +1,63 @@
-<!--Toolbar-->
-<!-- <mat-toolbar color="primary" class="navbar">
-    <div>
-        <button mat-icon-button><mat-icon>menu</mat-icon></button>
-        <span>Angular App</span>
-    </div>
-    
-    <div>
-        <span>Home</span>
-        <span>About</span>
-        <span>Services</span>
-    </div>
-</mat-toolbar>
-<br> -->
-
-
+<!-- <app-mat-table></app-mat-table> -->
+<!-- <app-material-components></app-material-components> -->
+<!--LifeCycle-->
+<!-- <app-lifecycle [name]="myname"></app-lifecycle> -->
+<!-- <button (click)="changeName()">Change Name</button>
+<button (click)="changeName1()">Change Name</button>
+<br><br>
+<button routerLink='table'>Table</button>
+<button routerLink='table/material'>Material</button>
+<button routerLink=':observable'>Observable</button>
 <br><br><br>
-<!--MatExpansion   multi="true" ==>remove the accordian feature hideToggle ==> close top right icon-->
-<mat-accordion class="design" >
-   
-        <mat-expansion-panel  [ngClass] = "panelFocus"
+<router-outlet></router-outlet> -->
+<!-- <br><br><br> -->
+<!--Virtual Scrolling-->
+<!-- <cdk-virtual-scroll-viewport itemSize="100" class="container1">
+    <div class="number" *cdkVirtualFor="let number of numbers">
+        {{number}}
+    </div>
+</cdk-virtual-scroll-viewport> -->
+<!-- MatExpansion   multi="true" ==>remove the accordian feature 
+                   hideToggle ==> close top right icon -->
+ <!-- <mat-accordion class="design">
+    <mat-expansion-panel  [ngClass] = "panelFocus"
+    [expanded]="step === 0" (opened)="setStep(0)"
+    (afterExpand)="setVisible(true)"
+    (closed)="closePan(true)"
+    >
+        <mat-expansion-panel-header
+        [style.background]="favoriteColor=='blue' ? '#b1c5e6' : favoriteColor=='gray' ?
+        'gray' : '#00868b' "
+        >
+                <mat-panel-title>
+                Selvakumar Raman
+                </mat-panel-title>
+                <mat-panel-description>
+                Personal Details
+                </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div *ngFor="let data of students">
+            <p>I am {{data.name}} my department is {{data.department}}.</p>
+        </div>
+        <mat-action-row>
+            <button mat-raised-button color="primary" (click)="showItems()">
+                Next
+            </button>
+        </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion> -->
+                
+<!-- 
+ <mat-accordion class="design" >
+    <mat-expansion-panel  [ngClass] = "panelFocus"
                          [expanded]="step === 0" (opened)="setStep(0)"
                          (afterExpand)="setVisible(true)"
                          (closed)="closePan(true)"
+        
                          >
-        <mat-expansion-panel-header [style.background]=" favoriteColor=='gray'?'gray':'#b1c5e6' "
+        <mat-expansion-panel-header
+        [style.background]="favoriteColor=='blue' ? '#b1c5e6' : favoriteColor=='gray' ?
+        'gray' : '#00868b' "
         >
             <mat-panel-title>
                 Selvakumar Raman
@@ -38,16 +72,18 @@
                 Submit
             </button>
         </mat-action-row>
-        </mat-expansion-panel>
+    </mat-expansion-panel>
     
-    
-    
-        <mat-expansion-panel [ngClass] = "panelFocus" 
+    <mat-expansion-panel [ngClass] = "panelFocus" 
                          [expanded]="step === 1" (opened)="setStep(1)"
                          (afterExpand)="setVisible(true)"
                          (closed)="closePan(true)"
+        
                         >
-        <mat-expansion-panel-header [style.background]=" favoriteColor=='gray'?'gray':'#b1c5e6' ">
+        <mat-expansion-panel-header
+        [style.background]="favoriteColor=='blue' ? '#b1c5e6' : favoriteColor=='gray' ?
+        'gray' : '#00868b' "
+        >
             <mat-panel-title>
                 Selvakumar Raman
             </mat-panel-title>
@@ -63,14 +99,15 @@
         </mat-action-row>
     </mat-expansion-panel>
   
-    
-   
-        <mat-expansion-panel  [ngClass] = "panelFocus"
+    <mat-expansion-panel  [ngClass] = "panelFocus"
                           [expanded]="step === 2" (opened)="setStep(2)" 
                           (afterExpand)="setVisible(true)"
                           (closed)="closePan(true)"
+        
                         >
-        <mat-expansion-panel-header [style.background]=" favoriteColor=='gray'?'gray':'#b1c5e6' "
+        <mat-expansion-panel-header
+        [style.background]="favoriteColor=='blue' ? '#b1c5e6' : favoriteColor=='gray' ?
+        'gray' : '#00868b' "
         >
             <mat-panel-title>
                 Selvakumar Raman
@@ -79,14 +116,13 @@
                 Other Details
             </mat-panel-description>
         </mat-expansion-panel-header>
-        <p>I am Selvakumar Raman, won first prize in Dance  Competion.</p>
+            <p>I am Selvakumar Raman, won first prize in Dance  Competion.</p>
         <mat-action-row>
             <button mat-raised-button color="primary">
                 Submit
             </button>
         </mat-action-row>
     </mat-expansion-panel>
-
 </mat-accordion>
 <br>
 <div class="container">
@@ -103,6 +139,36 @@
                 </mat-radio-button>
             </mat-radio-group>
         </div>
+    </div>
+</div>  -->
+
+<!-- <app-matstepper></app-matstepper> -->
+
+<!-- <app-angular-form-array></app-angular-form-array> -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="box">
+                <p>
+                    If `true` - carousel indicators indicate slides chunks works ONLY if singleSlideOffset = FALSE
+                  </p>
+                  <carousel [itemsPerSlide]="itemsPerSlide"
+                            [singleSlideOffset]="false"
+                            [interval]="0"
+                            [indicatorsByChunk]="true"
+                            [showIndicators]="false"
+                    >
+                    <slide *ngFor="let slide of slides; let index=index">
+                      <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+                      <div class="carousel-caption">
+                        <h4>Slide {{index}}</h4>
+                      </div>
+                    </slide>
+                  </carousel>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
     </div>
 </div>
 

@@ -1,0 +1,10 @@
+
+<!-- <mat-spinner *ngIf="showSpinner"></mat-spinner> -->
+<h3 mat-dialog-title>Session Timeout</h3>
+<mat-dialog-content>
+    Hello {{data.name}} You will be logged out due to inactivity
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" mat-dialog-close="true">Keep me loggedIn</button>
+    <button mat-raised-button color="warn" mat-dialog-close="false">Log Out</button>
+</mat-dialog-actions>

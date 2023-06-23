@@ -1,36 +1,3 @@
-/*toolbar design*/
-.navbar{
-    justify-content: space-between;
-}
-
-span{
-    padding-right: 1rem;
-}
-
-/*sidenav design*/
-mat-sidenav-container{
-    height: 100%;
-}
-
-mat-sidenav, mat-sidenav-content{
-    padding:16px;
-}
-
-mat-sidenav{
-    background-color: lightcoral;
-    width: 200px;
-}
-
-/*menu*/
-.center{
-    margin:10rem;
-}
-
-/*grid*/
-mat-grid-tile{
-    background-color: lightblue;
-}
-
 /*accordian*/
 mat-accordion{
     display: grid;
@@ -90,11 +57,12 @@ divv > :nth-child(2)  { /*change divv to mat-accordion to see the output*/
 
 .box1:focus-within {
     border: 2px solid #545e71;
+    /*color:rgb(207, 226, 226)*/
     
 }
 
 .box2:focus-within {
-    border: 2px solid  rgb(115, 114, 172);
+    border: 2px solid  #00868b;
     
 }
 
@@ -114,3 +82,22 @@ divv > :nth-child(2)  { /*change divv to mat-accordion to see the output*/
     color: rgb(155, 153, 153);
 }
 
+/*virtual scroll bar*/
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid maroon;
+    box-sizing: border-box;
+    height: 100px;
+}
+
+.container1{
+    height: 1000px;
+}
+
+
+.box{
+    margin-top: 20px;
+    background-color: black;
+}
